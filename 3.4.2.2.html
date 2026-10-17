@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>CSS</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #f4c7a8;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .slide {
+            background-color: #a5c98f;
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .col__aside {
+            background-color: #f4a261;
+            flex: 0 0 20%;
+            max-width: 20%;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .col__article {
+            background-color: #a8c8f0;
+            flex: 0 0 60%;
+            max-width: 60%;
+        }
+
+        .col__ads {
+            background-color: #d1b3f0;
+            flex: 0 0 20%;
+            max-width: 20%;
+            font-size: 20px;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .col__ads img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        .col__article__title {
+            font-size: 20px;
+            text-align: center;
+            padding-top: 20px;
+            margin: 0;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .grid__item {
+            background-color: #ffff00;
+            min-height: 120px;
+        }
+
+        .footer {
+            background-color: #f4c7a8;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .col__aside,
+            .col__article,
+            .col__ads {
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+
+            .grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        Заголовок страницы
+    </header>
+
+    <div class="slide">Блок слайдера</div>
+
+    <div class="row">
+        <aside class="col__aside">
+            Блок меню
+        </aside>
+
+        <article class="col__article">
+            <h1 class="col__article__title">
+                Основная часть
+            </h1>
+
+            <div class="grid">
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+                <div class="grid__item"></div>
+            </div>
+        </article>
+
+        <aside class="col__ads">
+            Блок рекламы
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzTimE5HDhwFnEUuEHbd8FPNkeYq-oesx3e9P1nCuV-Q&s=10" alt="Рекламное изображение">
+        </aside>
+    </div>
+
+    <footer class="footer">
+        Блок окончания страницы
+    </footer>
+</body>
+</html>
